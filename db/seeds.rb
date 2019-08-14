@@ -5,3 +5,60 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Restaurant.destroy_all
+
+restaurants_attributes = [
+  {
+    name:         'Dishoom',
+    address:      '7 Boundary St, London E2 7JE',
+    category:     'Chinese'
+
+  },
+  {
+    name:         'Pizza East',
+    address:      '56A Shoreditch High St, London E1 6PQ',
+    category:     'Italian'
+  },
+  {
+    name:         'Da Mario',
+    address:      '5 Gloucester Rd, South Kensington, London SW7 4PP',
+    category:     'Italian'
+  },
+  {
+    name:         'Nobu Park Lane',
+    address:      'Metropolitan by COMO, 19 Old Park Ln, Mayfair, London W1K 1LB',
+    category:     'Japanese'
+  },
+  {
+    name:         'Restaurant Gordon Ramsay',
+    address:      '68 Royal Hospital Rd, Chelsea, London SW3 4HP',
+    category:     'French'
+  }
+]
+Restaurant.create!(restaurants_attributes)
+
+Review.destroy_all
+
+reviews_attributes = [
+  {
+    content:      'Buzzy destination for Indian street food in Bombay-style vintage decor.',
+    rating:        5
+  },
+  {
+    content:      'Pizzeria with industrial looks, serving rustic pizza and antipasti.',
+    rating:        2
+  },
+  {
+    content:      'Princess Dianas favourite Pizzeria.',
+    rating:        4
+  },
+  {
+    content:      'High end japanese cuisine.',
+    rating:        3
+  },
+  {
+    content:      'High end french cuisine by a top chef',
+    rating:        5
+  }
+]
+Review.create!(reviews_attributes)
